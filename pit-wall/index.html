@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pit Wall — GP de São Paulo</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🏁</text></svg>">
+
+    <!-- fonte do google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- topo -->
+    <header class="topbar">
+        <div class="logo">PIT<span>WALL</span></div>
+        <nav class="menu">
+            <a href="#pilotos">Pilotos</a>
+            <a href="#classificacao">Classificação</a>
+            <a href="#ingressos">Ingressos</a>
+        </nav>
+        <a href="#ingressos" class="btn-primary">Comprar ingresso</a>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <p class="eyebrow">Autódromo de Interlagos · Novembro de 2026</p>
+            <h1>GP de <span>São Paulo</span></h1>
+            <p class="hero-desc">71 voltas, 22 carros no grid e a torcida brasileira empurrando o Bortoleto na reta.</p>
+            <div class="hero-buttons">
+                <a href="#ingressos" class="btn-primary">Garantir meu lugar</a>
+                <a href="#classificacao" class="btn-outline">Ver classificação</a>
+            </div>
+        </div>
+
+        <!-- numeros -->
+        <div class="track-info">
+            <div class="info">
+                <strong>71</strong>
+                <span>Voltas</span>
+            </div>
+            <div class="info">
+                <strong>4.309</strong>
+                <span>km por volta</span>
+            </div>
+            <div class="info">
+                <strong>15</strong>
+                <span>Curvas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- zebra -->
+    <div class="kerb"></div>
+
+    <!-- seções -->
+    <main class="container">
+
+        <!-- pilotos -->
+        <section id="pilotos">
+            <h2><span>01</span> Grid de pilotos</h2>
+
+            <div class="drivers">
+                <article class="driver-card team-ferrari">
+                    <div class="car-number">16</div>
+                    <h3>Charles <strong>Leclerc</strong></h3>
+                    <p>Ferrari</p>
+                </article>
+
+                <article class="driver-card team-mclaren">
+                    <div class="car-number">81</div>
+                    <h3>Oscar <strong>Piastri</strong></h3>
+                    <p>McLaren</p>
+                </article>
+
+                <article class="driver-card team-mercedes">
+                    <div class="car-number">63</div>
+                    <h3>George <strong>Russell</strong></h3>
+                    <p>Mercedes</p>
+                </article>
+
+                <article class="driver-card team-audi">
+                    <div class="car-number">5</div>
+                    <h3>Gabriel <strong>Bortoleto</strong></h3>
+                    <p>Audi</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- classificação -->
+        <section id="classificacao">
+            <h2><span>02</span> Classificação</h2>
+
+            <!-- filtros -->
+            <form class="filters" method="get" action="#">
+                <div class="filter-item">
+                    <label for="busca">Buscar piloto</label>
+                    <input type="text" id="busca" name="busca" placeholder="Nome ou equipe...">
+                </div>
+
+                <div class="filter-item">
+                    <label for="equipe">Equipe</label>
+                    <select id="equipe" name="equipe">
+                        <option value="">Todas as equipes</option>
+                        <option value="ferrari">Ferrari</option>
+                        <option value="mclaren">McLaren</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-outline">Filtrar</button>
+            </form>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Piloto</th>
+                            <th>Equipe</th>
+                            <th>Vitórias</th>
+                            <th>Diferença</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- líder -->
+                        <tr class="leader team-mclaren">
+                            <td><span class="pos">1</span></td>
+                            <td><span class="bar"></span>Oscar Piastri</td>
+                            <td>McLaren</td>
+                            <td>6</td>
+                            <td class="diff">LÍDER</td>
+                            <td class="points">366</td>
+                        </tr>
+                        <tr class="team-ferrari">
+                            <td><span class="pos">2</span></td>
+                            <td><span class="bar"></span>Charles Leclerc</td>
+                            <td>Ferrari</td>
+                            <td>5</td>
+                            <td class="diff">−18</td>
+                            <td class="points">348</td>
+                        </tr>
+                        <tr class="team-mercedes">
+                            <td><span class="pos">3</span></td>
+                            <td><span class="bar"></span>George Russell</td>
+                            <td>Mercedes</td>
+                            <td>4</td>
+                            <td class="diff">−41</td>
+                            <td class="points">325</td>
+                        </tr>
+                        <tr class="team-audi">
+                            <td><span class="pos">4</span></td>
+                            <td><span class="bar"></span>Gabriel Bortoleto</td>
+                            <td>Audi</td>
+                            <td>0</td>
+                            <td class="diff">−298</td>
+                            <td class="points">68</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Ingressos -->
+        <section id="ingressos" class="tickets">
+
+            <!-- esquerda -->
+            <div class="tickets-info">
+                <h2><span>03</span> Ingressos</h2>
+                <p>Escolha o setor e venha ver a decisão do título de perto.</p>
+
+                <div class="alert">Últimos 120 lugares no Setor da Reta!</div>
+
+                <div class="sector">
+                    <span>Arquibancada A</span>
+                    <strong>R$ 480</strong>
+                </div>
+                <div class="sector">
+                    <span>Setor da Reta</span>
+                    <strong>R$ 890</strong>
+                </div>
+                <div class="sector">
+                    <span>Box VIP</span>
+                    <strong>R$ 2.400</strong>
+                </div>
+            </div>
+
+            <!-- direita -->
+            <form action="#" class="ticket-form">
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Como está no documento">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="setor">Setor</label>
+                        <select id="setor" name="setor" required>
+                            <option value="">Escolha o setor</option>
+                            <option value="arquibancada">Arquibancada A</option>
+                            <option value="reta">Setor da Reta</option>
+                            <option value="vip">Box VIP</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dia">Dia</label>
+                        <input type="date" id="dia" name="dia" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qtd">Ingressos</label>
+                        <input type="number" id="qtd" name="qtd" min="1" max="6" value="2">
+                        <small>Até 6 por pessoa.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="perfil">Seu perfil (opcional)</label>
+                        <input type="url" id="perfil" name="perfil" placeholder="https://instagram.com/...">
+                    </div>
+
+                    <!-- full: 2 colunas -->
+                    <div class="form-group full">
+                        <label for="foto">Foto da torcida para o telão</label>
+                        <input type="file" id="foto" name="foto" accept="image/*">
+                        <small>JPG ou PNG · a melhor foto aparece no telão da reta!</small>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="recado">Recado para o seu piloto</label>
+                        <textarea id="recado" name="recado" placeholder="Vai, Bortoleto! Interlagos é sua casa..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary full">Reservar ingressos</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- rodapé -->
+    <footer>
+        <p>PIT<span>WALL</span> · Projeto de estudo de HTML e CSS · Feito por Vitor Andrade Veiga  da Silva · Pontos e números da tabela são ilustrativos</p>
+    </footer>
+
+</body>
+</html>
